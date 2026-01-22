@@ -1,5 +1,6 @@
 name: python ci workflow
-on : workflow_dispatch 
+on:
+  workflow_dispatch: 
 jobs:
   build job:
     runs-on: ubuntu-latest
