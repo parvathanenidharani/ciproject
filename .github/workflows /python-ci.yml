@@ -1,26 +1,24 @@
 name: python ci workflow
+
 on:
-  workflow_dispatch: 
+  workflow_dispatch:
+
 jobs:
   build_job:
     runs-on: ubuntu-latest
-    steps: 
-      - name: checkout code
-        uses: actions/checkout@v6
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-      - name: python set up 
+      - name: Python setup
         uses: actions/setup-python@v6
         with:
-          python-version: '3.13' 
+          python-version: '3.12'
 
-      - name: installing the dependencies
+      - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: running the tests
-        run : 
-          pytest 
-          
-    
-  
+      - name: Run tests
+        run: pytest
