@@ -2,7 +2,7 @@ name: python ci workflow
 on:
   workflow_dispatch: 
 jobs:
-  build job:
+  build_job:
     runs-on: ubuntu-latest
     steps: 
       - name: checkout code
